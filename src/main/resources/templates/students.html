@@ -6,11 +6,13 @@
 	<title>Student Management System</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<style>
+
+	<style>
 		body {
 			background-image: url("/images/background.png");
 		}
-		</style>
+	</style>
+
 
 </head>
 
@@ -52,42 +54,56 @@
 			</form>
 		</div>
 	</nav>
-	<div class="container">
-		<div class="row">
-			<h1> List Students</h1>
-		</div>
+	<div class="container rounded">
 		<div class="row">
 			<div class="col-lg-3">
-				<a th:href="@{/students/new}" class="btn btn-primary btn-sm mb-3"> Add Student</a>
+				<a th:href="@{/students/add}" class="btn btn-primary btn-sm mb-3"> Add Student</a>
 			</div>
 		</div>
-
-		<table class="table table-striped table-dark table-hover">
-			<thead>
-				<tr>
-
-					<th> Student First Name</th>
-					<th> Student Last Name</th>
-					<th> Student email</th>
-					<th> Student Address</th>
-					<th> Action</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="student:${students}">
-
-					<td th:text="${student.firstName}"></td>
-					<td th:text="${student.LastName}"></td>
-					<td th:text="${student.email}"></td>
-					<td th:text="${student.address}"></td>
-
-				</tr>
-
-			</tbody>
-		</table>
-
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-body text-center">
+						<h3 class="card-title m-b-0">Student List </h5>
+					</div>
+					<div class="card">
+						<a th:href="@{/students/add}" class="btn btn-primary btn-sm mb-3"> Add New Student</a>
+					</div>
+					<div class="table-responsive">
+						<table id="studenttable" class="table-bordered-round table text-center table-hover">
+							<thead class="thead-light">
+								<tr>
+									<th scope="col">Id</th>
+									<th scope="col">First Name</th>
+									<th scope="col">Last Name</th>
+									<th scope="col">Email</th>
+									<th scope="col">Address</th>
+									<th scope="col">Action</th>
+								</tr>
+							</thead>
+							<tbody class="">
+								<tr th:each="student:${students}">
+									<td th:text="${student.id}"></td>
+									<td th:text="${student.firstName}"></td>
+									<td th:text="${student.LastName}"></td>
+									<td th:text="${student.email}"></td>
+									<td th:text="${student.address}"></td>
+									<td>
+										<a th:href="@{/students/update/{id}(id=${student.id})}" class="btn btn-primary">
+											Update
+										</a>
+										<a th:href="@{/students/delete/{id}(id=${student.id})}" class="btn btn-primary">
+											Delete
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
 
 </body>
 
