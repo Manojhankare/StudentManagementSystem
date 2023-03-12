@@ -1,28 +1,30 @@
 package com.stuman.pro;
 
+//import org.hibernate.sql.Update;
+
 //import java.net.InetAddress;
 //import java.net.UnknownHostException;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.stuman.pro.entity.Student;
-import com.stuman.pro.repository.StudentRepository;
+//import com.stuman.pro.entity.Student;
+//import com.stuman.pro.repository.StudentRepository;
 
-//@ComponentScan
+@ComponentScan
 @SpringBootApplication
-public class StudenteManangeSystemApplication implements CommandLineRunner {
+public class StudentManagementSystemApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudenteManangeSystemApplication.class, args);
+		SpringApplication.run(StudentManagementSystemApplication.class, args);
 
 	}
 
-	//@Autowired
-	//private StudentRepository studentRepository;
+//	@Autowired
+//	private StudentRepository studentRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -32,7 +34,7 @@ public class StudenteManangeSystemApplication implements CommandLineRunner {
 //		studentRepository.save(student2);
 //		Student student3 = new Student("John", "Wick", "wick@gmail.com", "London");
 //		studentRepository.save(student3);
-		
+
 	}
 
 }
