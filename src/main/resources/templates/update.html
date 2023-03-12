@@ -11,7 +11,7 @@
 		body {
 			background-image: url("/images/background.png");
 		}
-		</style>
+	</style>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
 		</div>
 	</nav>
 	<div class="container text-dark border-primary ">
-	<br>
+		<br>
 
 		<div class="row border-primary">
 
@@ -39,32 +39,33 @@
 				<h1 class="  text-center"> Update Existing Student Details</h1>
 				<div class="card body border-primary">
 					<div class="card-body">
-						
+
 						<form th:action="@{/students/{id}(id=${student.id})}" th:object="${student}" method="post">
 							<div class="form-group">
-								<label >First Name</label>
+								<label>First Name</label>
 								<input type="text" name="firstName" th:field="*{firstName}	" class="form-control"
 									placeholder="Enter Student First Name" required />
 							</div>
 							<div class="form-group">
 								<label>Last Name</label>
 								<input type="text" name="lastName" th:field="*{lastName}" class="form-control"
-									placeholder="Enter Student Last Name" required/>
+									placeholder="Enter Student Last Name" required />
 							</div>
 							<div class="form-group">
 								<label>Student Email</label>
-								<input type="text" name="email"  th:field="*{email}"  class="form-control"
-									placeholder="Enter Student" required/>
+								<input type="text" name="email" th:field="*{email}" class="form-control"
+									placeholder="Enter Student" required />
 							</div>
 							<div class="form-group">
 								<label>Student Address</label>
 								<input type="text" name="address" th:field="*{address}" class="form-control"
-									placeholder="Enter Student Address" required/>
+									placeholder="Enter Student Address" required />
 							</div>
 							<div class="box-footer">
 								<button type="submit" class="btn btn-primary">Submit</button>
-								<button type="reset" class="btn btn-primary" >Reset Data</button>
-								<button type="button" class="btn btn-primary" onclick="javascript:window.location='/students';">Cancel</button>
+								<button type="reset" class="btn btn-primary">Reset Data</button>
+								<button type="button" class="btn btn-primary"
+									onclick="javascript:window.location='/students';">Cancel</button>
 							</div>
 						</form>
 					</div>
@@ -100,13 +101,15 @@
 									</svg>
 									<i class="fa fa-linkedin" aria-hidden="true">Linkedin</i>
 								</button></a>
+								<a href="https://github.com/Manojhankare/" class="text-light-emphasis">
 							<button type="button" class="btn btn-primary">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-									<path
-										d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
-									</path>
-								</svg> <i class="fa fa-github" aria-hidden="true">GitHub &nbsp;</i>
-							</button>
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-github" viewBox="0 0 16 16">
+										<path
+											d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+										</path>
+									</svg> <i class="fa fa-github" aria-hidden="true">GitHub &nbsp;</i>
+							</button></a>
 
 					</ul>
 				</div>
